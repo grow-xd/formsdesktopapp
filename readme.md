@@ -86,6 +86,7 @@ The server will start on `http://localhost:3000`.
 - **Create Submission**: Opens a form to create a new submission with a stopwatch timer.
 - **View Submissions**: Opens a form to view, edit, and delete submissions.
 - **Search by Email**: Opens a form to search for submissions by email.
+  
   ![image](https://github.com/grow-xd/formsdesktopapp/assets/80830946/898b3ac4-efe4-49a3-bd18-b024c0fc9f05)
 
 
