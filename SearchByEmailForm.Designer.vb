@@ -10,33 +10,43 @@ Partial Class SearchByEmailForm
         ' 
         ' txtEmailSearch
         ' 
-        txtEmailSearch.Location = New Point(177, 67)
+        txtEmailSearch.Location = New Point(150, 30)
         txtEmailSearch.Name = "txtEmailSearch"
         txtEmailSearch.PlaceholderText = "Enter email to search"
-        txtEmailSearch.Size = New Size(200, 23)
+        txtEmailSearch.Size = New Size(350, 30)
         txtEmailSearch.TabIndex = 0
+        txtEmailSearch.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         ' 
         ' btnSearch
         ' 
-        btnSearch.Location = New Point(383, 67)
+        btnSearch.BackColor = Color.SteelBlue
+        btnSearch.FlatStyle = FlatStyle.Flat
+        btnSearch.FlatAppearance.BorderSize = 0
+        btnSearch.ForeColor = Color.White
+        btnSearch.Margin = New Padding(2)
+        btnSearch.Location = New Point(510, 30)
         btnSearch.Name = "btnSearch"
-        btnSearch.Size = New Size(100, 25)
+        btnSearch.Size = New Size(100, 30)
         btnSearch.TabIndex = 1
         btnSearch.Text = "Search"
-        btnSearch.UseVisualStyleBackColor = True
+        btnSearch.UseVisualStyleBackColor = False
+        btnSearch.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold, GraphicsUnit.Point)
         ' 
         ' lstResults
         ' 
         lstResults.FormattingEnabled = True
-        lstResults.ItemHeight = 15
-        lstResults.Location = New Point(50, 110)
+        lstResults.ItemHeight = 20
+        lstResults.Location = New Point(50, 80)
         lstResults.Name = "lstResults"
-        lstResults.Size = New Size(562, 199)
+        lstResults.Size = New Size(620, 260)
         lstResults.TabIndex = 2
+        lstResults.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         ' 
         ' SearchByEmailForm
         ' 
-        ClientSize = New Size(670, 375)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(720, 380)
         Controls.Add(lstResults)
         Controls.Add(btnSearch)
         Controls.Add(txtEmailSearch)
@@ -44,9 +54,11 @@ Partial Class SearchByEmailForm
         Text = "Search By Email"
         ResumeLayout(False)
         PerformLayout()
+
     End Sub
 
     Friend WithEvents txtEmailSearch As TextBox
     Friend WithEvents btnSearch As Button
     Friend WithEvents lstResults As ListBox
 End Class
+

@@ -67,12 +67,12 @@ Partial Class CreateNewSubmissionForm
         btnToggleStopwatch.FlatStyle = FlatStyle.Flat
         btnToggleStopwatch.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold, GraphicsUnit.Point)
         btnToggleStopwatch.ForeColor = Color.White
-        btnToggleStopwatch.Location = New Point(117, 211)
+        btnToggleStopwatch.Location = New Point(108, 211)
         btnToggleStopwatch.Margin = New Padding(2)
         btnToggleStopwatch.Name = "btnToggleStopwatch"
         btnToggleStopwatch.Size = New Size(200, 30)
         btnToggleStopwatch.TabIndex = 4
-        btnToggleStopwatch.Text = "Start Stopwatch"
+        btnToggleStopwatch.Text = "Start Stopwatch (CTRL + S)"
         btnToggleStopwatch.UseVisualStyleBackColor = False
         ' 
         ' lblStopwatch
@@ -96,9 +96,9 @@ Partial Class CreateNewSubmissionForm
         btnSubmit.Location = New Point(130, 273)
         btnSubmit.Margin = New Padding(2)
         btnSubmit.Name = "btnSubmit"
-        btnSubmit.Size = New Size(200, 30)
+        btnSubmit.Size = New Size(261, 30)
         btnSubmit.TabIndex = 6
-        btnSubmit.Text = "Submit"
+        btnSubmit.Text = "Submit (CTRL + S)"
         btnSubmit.UseVisualStyleBackColor = False
         ' 
         ' Timer1

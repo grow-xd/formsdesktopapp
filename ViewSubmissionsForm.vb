@@ -4,7 +4,9 @@ Imports System.Threading.Tasks
 
 Public Class ViewSubmissionsForm
     Private currentIndex As Integer = 0
-
+    Public Sub New()
+        InitializeComponent()
+    End Sub
     Private Async Sub ViewSubmissionsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Await LoadSubmission(currentIndex)
     End Sub
@@ -31,6 +33,7 @@ Public Class ViewSubmissionsForm
                 response.EnsureSuccessStatusCode()
                 Dim responseBody As String = Await response.Content.ReadAsStringAsync()
 
+
                 If responseBody.Contains("error") Then
                     Dim errorResponse As ErrorResponse = JsonSerializer.Deserialize(Of ErrorResponse)(responseBody)
                     If errorResponse.error = "Submission not found." Then
@@ -44,7 +47,7 @@ Public Class ViewSubmissionsForm
 
                 txtName.Text = submission.name
                 txtEmail.Text = submission.email
-                txtPhoneNumber.Text = submission.phone
+                txtPhoneNumber.Text = submission.phone.ToString() ' Convert phone to string
                 txtGitHub.Text = submission.github_link
                 lblStopwatch.Text = TimeSpan.FromSeconds(submission.stopwatch_time).ToString("hh\:mm\:ss")
             Catch ex As HttpRequestException
@@ -74,7 +77,22 @@ Public Class ViewSubmissionsForm
         editForm.ShowDialog()
         Await LoadSubmission(currentIndex)
     End Sub
-
+    Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
+        If keyData = (Keys.Control Or Keys.P) Then
+            btnPrevious.PerformClick()
+            Return True
+        ElseIf keyData = (Keys.Control Or Keys.N) Then
+            btnNext.PerformClick()
+            Return True
+        ElseIf keyData = (Keys.Control Or Keys.Delete) Then
+            btnDelete.PerformClick()
+            Return True
+        ElseIf keyData = (Keys.Control Or Keys.E) Then
+            btnEdit.PerformClick()
+            Return True
+        End If
+        Return MyBase.ProcessCmdKey(msg, keyData)
+    End Function
     Private Class Submission
         Public Property name As String
         Public Property email As String

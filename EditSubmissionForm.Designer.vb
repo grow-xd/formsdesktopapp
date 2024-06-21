@@ -19,101 +19,121 @@
         ' 
         ' txtName
         ' 
-        txtName.Location = New Point(210, 63)
-        txtName.Margin = New Padding(2, 2, 2, 2)
+        txtName.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtName.Location = New Point(221, 30)
+        txtName.Margin = New Padding(2)
         txtName.Name = "txtName"
-        txtName.Size = New Size(156, 23)
+        txtName.Size = New Size(176, 27)
         txtName.TabIndex = 0
         ' 
         ' txtEmail
         ' 
-        txtEmail.Location = New Point(210, 111)
-        txtEmail.Margin = New Padding(2, 2, 2, 2)
+        txtEmail.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtEmail.Location = New Point(221, 71)
+        txtEmail.Margin = New Padding(2)
         txtEmail.Name = "txtEmail"
-        txtEmail.Size = New Size(156, 23)
+        txtEmail.Size = New Size(176, 27)
         txtEmail.TabIndex = 1
         ' 
         ' txtPhoneNumber
         ' 
-        txtPhoneNumber.Location = New Point(210, 150)
-        txtPhoneNumber.Margin = New Padding(2, 2, 2, 2)
+        txtPhoneNumber.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtPhoneNumber.Location = New Point(221, 112)
+        txtPhoneNumber.Margin = New Padding(2)
         txtPhoneNumber.Name = "txtPhoneNumber"
-        txtPhoneNumber.Size = New Size(156, 23)
+        txtPhoneNumber.Size = New Size(176, 27)
         txtPhoneNumber.TabIndex = 2
         ' 
         ' txtGitHub
         ' 
-        txtGitHub.Location = New Point(210, 193)
-        txtGitHub.Margin = New Padding(2, 2, 2, 2)
+        txtGitHub.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtGitHub.Location = New Point(221, 152)
+        txtGitHub.Margin = New Padding(2)
         txtGitHub.Name = "txtGitHub"
-        txtGitHub.Size = New Size(156, 23)
+        txtGitHub.Size = New Size(176, 27)
         txtGitHub.TabIndex = 3
         ' 
         ' lblStopwatch
         ' 
         lblStopwatch.AutoSize = True
-        lblStopwatch.Location = New Point(235, 239)
-        lblStopwatch.Margin = New Padding(2, 0, 2, 0)
+        lblStopwatch.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold, GraphicsUnit.Point)
+        lblStopwatch.Location = New Point(221, 208)
+        lblStopwatch.Margin = New Padding(2)
         lblStopwatch.Name = "lblStopwatch"
-        lblStopwatch.Size = New Size(49, 15)
+        lblStopwatch.Size = New Size(88, 25)
         lblStopwatch.TabIndex = 4
         lblStopwatch.Text = "00:00:00"
         ' 
         ' btnToggleTimer
         ' 
-        btnToggleTimer.Location = New Point(116, 239)
-        btnToggleTimer.Margin = New Padding(2, 2, 2, 2)
+        btnToggleTimer.BackColor = Color.Green
+        btnToggleTimer.FlatStyle = FlatStyle.Flat
+        btnToggleTimer.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold, GraphicsUnit.Point)
+        btnToggleTimer.ForeColor = Color.White
+        btnToggleTimer.Location = New Point(117, 205)
+        btnToggleTimer.Margin = New Padding(2)
         btnToggleTimer.Name = "btnToggleTimer"
-        btnToggleTimer.Size = New Size(78, 22)
+        btnToggleTimer.Size = New Size(88, 26)
         btnToggleTimer.TabIndex = 5
         btnToggleTimer.Text = "Start"
-        btnToggleTimer.UseVisualStyleBackColor = True
+        btnToggleTimer.UseVisualStyleBackColor = False
         ' 
         ' btnSubmit
         ' 
-        btnSubmit.Location = New Point(191, 306)
-        btnSubmit.Margin = New Padding(2, 2, 2, 2)
+        btnSubmit.BackColor = Color.SteelBlue
+        btnSubmit.FlatStyle = FlatStyle.Flat
+        btnSubmit.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold, GraphicsUnit.Point)
+        btnSubmit.ForeColor = Color.White
+        btnSubmit.Location = New Point(183, 253)
+        btnSubmit.Margin = New Padding(2)
         btnSubmit.Name = "btnSubmit"
-        btnSubmit.Size = New Size(78, 22)
+        btnSubmit.Size = New Size(126, 38)
         btnSubmit.TabIndex = 6
-        btnSubmit.Text = "Submit"
-        btnSubmit.UseVisualStyleBackColor = True
+        btnSubmit.Text = "Submit Edit"
+        btnSubmit.UseVisualStyleBackColor = False
+        ' 
+        ' timer
+        ' 
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(139, 113)
+        Label4.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Label4.Location = New Point(113, 73)
         Label4.Name = "Label4"
-        Label4.Size = New Size(36, 15)
+        Label4.Size = New Size(46, 20)
         Label4.TabIndex = 14
         Label4.Text = "Email"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(123, 150)
+        Label3.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.Location = New Point(99, 112)
         Label3.Name = "Label3"
-        Label3.Size = New Size(71, 15)
+        Label3.Size = New Size(108, 20)
         Label3.TabIndex = 13
-        Label3.Text = "Phone Num"
+        Label3.Text = "Phone Number"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(123, 193)
-        Label2.MaximumSize = New Size(80, 70)
+        Label2.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.Location = New Point(99, 152)
+        Label2.MaximumSize = New Size(88, 52)
         Label2.Name = "Label2"
-        Label2.Size = New Size(68, 30)
+        Label2.Size = New Size(74, 40)
         Label2.TabIndex = 12
-        Label2.Text = "Github Link for Task 2"
+        Label2.Text = "GitHub Repo Link"
         Label2.TextAlign = ContentAlignment.TopCenter
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(139, 71)
+        Label1.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(113, 36)
         Label1.Name = "Label1"
-        Label1.Size = New Size(39, 15)
+        Label1.Size = New Size(49, 20)
         Label1.TabIndex = 11
         Label1.Text = "Name"
         ' 
@@ -121,7 +141,7 @@
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(500, 403)
+        ClientSize = New Size(499, 302)
         Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(Label2)
@@ -133,7 +153,7 @@
         Controls.Add(txtPhoneNumber)
         Controls.Add(txtEmail)
         Controls.Add(txtName)
-        Margin = New Padding(2, 2, 2, 2)
+        Margin = New Padding(4, 4, 4, 4)
         Name = "EditSubmissionForm"
         Text = "Edit Submission"
         ResumeLayout(False)

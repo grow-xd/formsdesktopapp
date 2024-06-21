@@ -22,7 +22,7 @@ Public Class CreateNewSubmissionForm
             Timer1.Start()
         End If
         stopwatchRunning = Not stopwatchRunning
-        btnToggleStopwatch.Text = If(stopwatchRunning, "Pause Stopwatch", "Resume Stopwatch")
+        btnToggleStopwatch.Text = If(stopwatchRunning, "Pause Stopwatch (CTRL + T)", "Resume Stopwatch (CTRL + T)")
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -74,7 +74,17 @@ Public Class CreateNewSubmissionForm
         Timer1.Stop()
         stopwatchRunning = False
     End Sub
+    Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
+        If keyData = (Keys.Control Or Keys.T) Then
+            btnToggleStopwatch.PerformClick()
+            Return True
+        ElseIf keyData = (Keys.Control Or Keys.S) Then
+            btnSubmit.PerformClick()
+            Return True
 
+        End If
+        Return MyBase.ProcessCmdKey(msg, keyData)
+    End Function
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
